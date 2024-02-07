@@ -16,8 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-
+from CRMapp.views import MetricsView
 urlpatterns = [
     path('admin/', admin.site.urls),
-   
+    
+    path('metrics/', MetricsView.as_view(), name='metrics'),
 ]
